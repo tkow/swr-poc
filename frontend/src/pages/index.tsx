@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import reactLogo from '../assets/react.svg'
+import '../assets/index.css'
 
-function App() {
+export function Index() {
   const [count, setCount] = useState(0)
 
   return (
@@ -31,4 +31,4 @@ function App() {
   )
 }
 
-export default App
+
