@@ -1,0 +1,38 @@
+{
+  "folders": [
+    {
+      "name": "🗂 project",
+      "path": "../"
+    },
+    {
+      "name": "📂 backend",
+      "path": "../backend"
+    },
+    {
+      "name": "📂 frontend",
+      "path": "../frontend"
+    }
+  ],
+  "settings": {
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact"
+    ],
+    "files.exclude": {
+      "node_modules/": true,
+      "packages/": true,
+      "apps/": true
+    },
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "eslint.workingDirectories": [
+      {
+        "mode": "auto"
+      }
+    ]
+  }
+}
