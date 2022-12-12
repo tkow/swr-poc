@@ -4,9 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "gen:clean": "rm -fr ./frontend/src/api/aspida",
+    "gen:client": "npm run gen:clean && openapi2aspida -i ./backend/api-v1-from-nest.yaml -o ./frontend/src/api/aspida",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "openapi2aspida": "^0.21.0"
+  }
 }
