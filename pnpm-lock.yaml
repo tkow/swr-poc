@@ -94,6 +94,7 @@ importers:
       axios: ^1.2.1
       react: ^18.2.0
       react-dom: ^18.2.0
+      react-hooks-form: ^2.0.1
       react-router: ^6.4.5
       react-router-dom: ^6.4.5
       swr: ^2.0.0
@@ -106,6 +107,7 @@ importers:
       axios: 1.2.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+      react-hooks-form: 2.0.1_biqbaboplfbrettd7655fr4n2y
       react-router: 6.4.5_react@18.2.0
       react-router-dom: 6.4.5_biqbaboplfbrettd7655fr4n2y
       swr: 2.0.0_react@18.2.0
@@ -5350,6 +5352,13 @@ packages:
       sisteransi: 1.0.5
     dev: true
 
+  /prop-types/15.6.2:
+    resolution: {integrity: sha512-3pboPvLiWD7dkI3qf3KbUe6hKFKa52w+AE0VCqECtf+QHAKgOL37tTaNCnuX1nAAQ4ZhyP+kYVKf8rLmJ/feDQ==}
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+    dev: false
+
   /proxy-addr/2.0.7:
     resolution: {integrity: sha512-llQsMLSUDUPT44jdrU/O37qlnifitDP+ZwrmmZcoSKyLKvtZxpyV0n2/bD/N4tBAAZ/gJEdZU7KMraoK1+XYAg==}
     engines: {node: '>= 0.10'}
@@ -5421,6 +5430,18 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-hooks-form/2.0.1_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-h/4qBKn3rW/yU3ywqtY5aWpyrMkZ+YjNnbuS1gZUYb12FyHXyBHXcKj+htyleMgPUxIjn2z2w6WuTy71BcKOYA==}
+    peerDependencies:
+      react: ^16.8.0
+      react-dom: ^16.8.0
+    dependencies:
+      lodash: 4.17.21
+      prop-types: 15.6.2
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /react-is/18.2.0:
