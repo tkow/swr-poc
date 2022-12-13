@@ -1,12 +1,13 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { User } from "../pages/User";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Index } from "../pages";
+import { UserRoutes } from "../pages/User";
 
-export const Router = () => (
+export const MainRouter = () => (
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Index />}></Route>
-      <Route path="/user" element={<User />}></Route>
+      <Route path="/" element={<Index />}>
+      </Route>
+      {UserRoutes}
     </Routes>
   </BrowserRouter>
 );
