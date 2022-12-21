@@ -1,6 +1,7 @@
 import AspidaAPI from "./aspida/$api";
-import aspida from '@aspida/axios'
-import axios from 'axios'
+import aspida from "@aspida/fetch";
+import axios from "axios";
 import { Config } from "../config";
 
-export const apiClient = AspidaAPI(aspida(axios, { baseURL: Config.API_URL}));
+export const apiClient = AspidaAPI(aspida(fetch, { baseURL: Config.API_URL }));
+

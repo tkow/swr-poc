@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@aspida/axios": "^1.11.0",
+    "@aspida/fetch": "^1.11.0",
     "@stitches/react": "^1.2.8",
     "@stoplight/prism-cli": "^4.10.5",
     "@stoplight/prism-http": "^4.10.5",

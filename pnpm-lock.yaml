@@ -85,7 +85,7 @@ importers:
 
   frontend:
     specifiers:
-      '@aspida/axios': ^1.11.0
+      '@aspida/fetch': ^1.11.0
       '@stitches/react': ^1.2.8
       '@stoplight/prism-cli': ^4.10.5
       '@stoplight/prism-http': ^4.10.5
@@ -105,7 +105,7 @@ importers:
       typescript: ^4.9.3
       vite: ^4.0.0
     dependencies:
-      '@aspida/axios': 1.11.0
+      '@aspida/fetch': 1.11.0
       '@stitches/react': 1.2.8_react@18.2.0
       '@stoplight/prism-cli': 4.10.5
       '@stoplight/prism-http': 4.10.5
@@ -272,8 +272,8 @@ packages:
       openapi-types: 12.1.0
     dev: true
 
-  /@aspida/axios/1.11.0:
-    resolution: {integrity: sha512-tsxkqCQPmPHlqVPW0BYwR7tHmmxbk8yEpOb6gn9bnqCe5riBDHLUiiWlde5+gSjWQAxx/TJ9AAlyciaL84vylw==}
+  /@aspida/fetch/1.11.0:
+    resolution: {integrity: sha512-ISi67d6YIL9thIXvbq6ac0UYAtcojILCiOEbjhCky55uyoGHV7z+ISgwzUf7X8CxTdY8iXiimcz6AMNtBfdiyw==}
     dependencies:
       aspida: 1.11.0
     dev: false
