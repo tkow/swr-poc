@@ -1,4 +1,14 @@
+import { useUserCreate } from "../../../api/swr/User";
+import { UserForm } from "../../../components/UserForm";
 
 export const Create = () => {
-  return <div>create</div>
-}
+  const { trigger } = useUserCreate()
+  return (
+    <div>
+      <>create</>
+      <UserForm
+        commit={trigger}
+      />
+    </div>
+  );
+};
