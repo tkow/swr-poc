@@ -3,13 +3,13 @@ import { UserForm } from "../../../components/UserForm";
 import { useParams } from "react-router-dom";
 
 type EditParams = {
-  userId: string;
+  id: string;
 }
 
 const useEditParams = () => {
-  const {userId} = useParams<EditParams>()
+  const {id} = useParams<EditParams>()
   return {
-    userId: userId ? parseInt(userId, 10) : undefined
+    userId: id ? parseInt(id, 10) : undefined
   }
 }
 
