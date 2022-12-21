@@ -3,6 +3,7 @@ import { useUsers } from "../../../api/swr/User";
 export const List = () => {
   const { data, isError, isLoading } = useUsers();
   if(isLoading) return <>loading</>
+  debugger
   if(!data || data.length === 0) return <>nothing to load</>
   return (
     <ol>
