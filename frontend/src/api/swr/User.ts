@@ -34,7 +34,7 @@ export const useUser = (id: number) => {
        async (prev) => {
           if(!prev) return prev
           const next = {...prev, ...data}
-          apiClient.users._id(id).$put({body: next})
+          await apiClient.users._id(id).$put({body: next})
           return next
         }
       ),

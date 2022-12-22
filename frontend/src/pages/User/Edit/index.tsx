@@ -16,7 +16,8 @@ const useEditParams = () => {
 export const Edit = () => {
   const { userId } = useEditParams()
   if (!userId) return null
-  const { data, commit } = useUser(userId);
+  const { data, commit, isLoading } = useUser(userId);
+  if(isLoading) return null
   return (
     <div>
       <>edit</>

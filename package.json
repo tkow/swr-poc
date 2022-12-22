@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "gen:oas": "pnpm run --filter nestjs-openapi-template  start -- --generate-only",
+    "gen:oas": "pnpm run --filter nestjs-openapi-template start -- --generate-only",
     "gen:clean": "rm -fr ./frontend/src/api/aspida",
+    "migrate": "npm --prefix ./backend run migrate",
     "gen:client": "npm run gen:clean && npm run gen:oas && openapi2aspida -i ./backend/api-v1-from-nest.yaml -o ./frontend/src/api/aspida",
     "start": "npm --prefix backend run start:dev & npm --prefix frontend run dev; wait;",
     "test": "echo \"Error: no test specified\" && exit 1"
