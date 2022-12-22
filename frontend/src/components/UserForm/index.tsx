@@ -14,8 +14,8 @@ function Component({ initialValue, commit }: UserFormProps) {
   });
   return (
     <Form onSubmit={handleSubmit(commit)}>
-      <Input {...register("name")} />
-      <Input type="number" {...register("age", { valueAsNumber: true })} />
+      name: <Input {...register("name")} />
+      age: <Input type="number" {...register("age", { valueAsNumber: true })} />
       <Input type="submit" />
     </Form>
   );

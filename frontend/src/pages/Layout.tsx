@@ -5,9 +5,9 @@ export function Layout() {
     <div>
       <nav>
         <ul>
-          <li>
+          {/* <li>
             <Link to="/">Index</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/user">User List</Link>
           </li>

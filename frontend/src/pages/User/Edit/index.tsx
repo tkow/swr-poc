@@ -2,7 +2,7 @@ import { useUser } from "../../../api/swr/User";
 import { UserForm } from "../../../components/UserForm";
 import { useParams } from "react-router-dom";
 import { DeleteButton } from "../../../components/DeleteButton";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 type EditParams = {
@@ -26,11 +26,19 @@ const Component = ({userId}:EditProps) => {
   const { data, commit, isLoading, destroy } = useUser(userId);
   const deleteUser = useCallback(async () => {
     await destroy()
-  }, [destroy])
+  }, [destroy, navigate])
+
+  useEffect(()=> {
+    if (!isLoading && !data) {
+      navigate('/user')
+    };
+  },[isLoading, data])
+
   if (isLoading) return null;
   if (!data) {
-    navigate('/user')
+    return null
   };
+
   return (
     <div>
       <>edit</>
