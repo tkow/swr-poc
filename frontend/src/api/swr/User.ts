@@ -30,14 +30,18 @@ export const useUser = (id: number) => {
     error,
     mutate,
     commit: async (data: UpdateUserDto) =>
-      mutate(
-       async (prev) => {
-          if(!prev) return prev
-          const next = {...prev, ...data}
-          await apiClient.users._id(id).$put({body: next})
-          return next
-        }
-      ),
+      mutate(async (prev) => {
+        if (!prev) return prev;
+        const next = { ...prev, ...data };
+        await apiClient.users._id(id).$put({ body: next });
+        return next;
+      }),
+    destroy: async () =>
+      mutate(async (prev) => {
+        if (!prev) return prev;
+        await apiClient.users._id(id).$delete();
+        return undefined;
+      }),
     isValidating,
   };
 };
@@ -47,7 +51,7 @@ export const useUserCreate = () => {
     `/user`,
     async (url: string, { arg }: { arg: CreateUserDto }) => {
       const res = await apiClient.users.$post({ body: arg });
-      return res
+      return res;
     }
   );
   return result;

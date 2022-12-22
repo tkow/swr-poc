@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import reactLogo from '../assets/react.svg'
-import '../assets/index.css'
+import { useState } from "react";
+import reactLogo from "../assets/react.svg";
+import "../assets/index.css";
 
 export function Index() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
@@ -28,7 +28,5 @@ export function Index() {
         Click on the Vite and React logos to learn more
       </p>
     </div>
-  )
+  );
 }
-
-

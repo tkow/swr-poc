@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { UserEntity } from "../../api/aspida/@types";
 import { Form, Input } from "./style";
 import { useForm } from "react-hook-form";
@@ -7,7 +8,7 @@ type UserFormProps = {
   commit: (data: UserEntity) => void;
 };
 
-export function UserForm({ initialValue, commit }: UserFormProps) {
+function Component({ initialValue, commit }: UserFormProps) {
   const { register, handleSubmit } = useForm<UserEntity>({
     defaultValues: initialValue,
   });
@@ -19,3 +20,5 @@ export function UserForm({ initialValue, commit }: UserFormProps) {
     </Form>
   );
 }
+
+export const UserForm = memo(Component);

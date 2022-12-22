@@ -1,3 +1,3 @@
 export default {
-  plaintext: 'white'
-}
+  plaintext: "white",
+};

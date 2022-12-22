@@ -5,7 +5,7 @@ import { List } from "./List";
 import { Delete } from "./Delete";
 
 export const UserRoutes = (
-  <Route path="user" >
+  <Route path="user">
     <Route index element={<List />}></Route>
     <Route path=":id" element={<Edit />}></Route>
     <Route path="new" element={<Create />}></Route>

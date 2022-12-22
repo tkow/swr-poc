@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "fmt": "prettier --write .",
     "gen:oas": "pnpm run --filter nestjs-openapi-template start -- --generate-only",
     "gen:clean": "rm -fr ./frontend/src/api/aspida",
     "migrate": "npm --prefix ./backend run migrate",
@@ -15,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "openapi2aspida": "^0.21.0"
+    "openapi2aspida": "^0.21.0",
+    "prettier": "^2.3.2"
   }
 }
