@@ -2,6 +2,7 @@ import { apiClient } from "../client";
 import useSWR, { SWRHook } from "swr";
 import useSWRMutation from "swr/mutation";
 import { CreateUserDto, UpdateUserDto } from "../aspida/@types";
+import {useCallback} from 'react'
 
 export const useUsers = (query?: {
   name?: string;
@@ -29,19 +30,19 @@ export const useUser = (id: number) => {
     isLoading,
     error,
     mutate,
-    commit: async (data: UpdateUserDto) =>
+    commit: useCallback(async (data: UpdateUserDto) =>
       mutate(async (prev) => {
         if (!prev) return prev;
         const next = { ...prev, ...data };
         await apiClient.users._id(id).$put({ body: next });
         return next;
-      }),
-    destroy: async () =>
+      }), [id]),
+    destroy: useCallback(async () =>
       mutate(async (prev) => {
         if (!prev) return prev;
         await apiClient.users._id(id).$delete();
         return undefined;
-      }),
+      }), [id]),
     isValidating,
   };
 };

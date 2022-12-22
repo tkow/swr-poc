@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Index } from "../pages";
-import { UserRoutes } from "../pages/User";
+import { UserRoutes } from "./UserRoutes";
 import { Layout } from "../pages/Layout";
 
 export const MainRouter = () => (
